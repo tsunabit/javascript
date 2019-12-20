@@ -43,11 +43,15 @@ src属性が指定されている場合、<script>タグ配下の内容は無視
 
 ### アンカータグにスクリプトを埋め込む　JavaScript擬似プロトコル
 scriptタグで記述する他、アンカータグにスクリプトを埋め込むことも可能。  
-JavaScript擬似プロトコルとは、アンカータグのhref属性に「JavaScript:〜」の形式で、　　
+JavaScript擬似プロトコルとは、アンカータグのhref属性に「JavaScript:〜」の形式で、  
 あたかもURLであるかのようにJavaScriptを埋め込むことも可能。
 この記法をJavaScript擬似プロトコルと言う。
 ```
 <a href="JavaScript:スクリプトコード">リンクテキスト</a>
+```
+例えば「リンクをクリックした時にダイアログを開きたい」という場面には、以下のように記述する。
+```
+<a href="JavaScript:window.alert('Hello, World!');">
 ```
 
 ### noscriptタグ JavaScript機能がオフの場合に情報を表示させる
