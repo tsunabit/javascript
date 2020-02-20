@@ -1,5 +1,6 @@
 # JavaScriptPractice2018
 
+## Chapter 2
 ### JavaScriptでHello World
 ```
 <script type="text/javascript">
@@ -182,6 +183,39 @@ var ary = new Array(-10);
 var ary = [];
 ```
 
+### for...in命令
+for...in命令は、指定された配列/連想配列やオブジェクト配下の要素/メンバに対して、  
+先頭から順次繰り返し処理を行います。仮変数に格納されるのが要素値そのものではないことに注意。  
+```
+for(仮変数 in 配列/オブジェクト) {
+    ループ内で実行する命令群
+}
+```
+使用例
+```
+<script type="text/javascript">
+var member = ['佐藤', '鈴木', '山田'];
+for(i in member) {
+	document.write(member[i] + '<br>');
+}
+
+var triangle = {width:30, height:50};
+for(j in triangle) {
+	document.write(j + ' = ' + triangle[j] + '<br>');
+}
+
+var book = new Object();
+book.title = 'Javascript入門';
+book.price = 900;
+book.author = '佐藤hoge';
+for(b in book) {
+	document.write(b + ' = ' + book[b] + '<br>');
+}
+</script>
+```
+
+
+## Chapter 3
 ### 匿名オブジェクト(無名オブジェクト)
 Objectオブジェクトの役割は、その他のオブジェクトに対して共通機能を提供することばかりではない。Objectオブジェクトを直接インスタンス化することで、ユーザーが自前のオブジェクトを定義するのに利用することもできます。
 ```
