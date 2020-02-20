@@ -86,6 +86,20 @@ var obj = {x:1, y:2, z:3};
 ドット演算子ではプロパティ名は識別子と見なされるため、識別子の命名規則に従っていない  
 「123」のような名前は使えない。しかし、ブラケット構文ではプロパティ名はあくまでも文字列  
 として指定するため、このような制限はない。  
+また、「プロパティに変数の値を使いたい」場合のみ、ブラケット演算子で書かなければならない  
+使用例
+```
+var book = new Object();
+book.title = 'Javascript入門';
+book.price = 900;
+book.author = '佐藤hoge';
+for(b in book) {
+    // title = undefinedのようにundefinedとなる
+    document.write(b + ' = ' + book.b + '<br>');
+    // title = Javascript入門のようにプロパティが出力する
+    document.write(b + ' = ' + book[b] + '<br>');
+}
+```
 
 ### 関数リテラル
 **JavaScriptでは、関数もデータ型の一種として扱われるのが特徴。  
