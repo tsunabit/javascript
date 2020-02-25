@@ -229,6 +229,28 @@ for(b in book) {
 ```
 
 
+### ラベル構文
+ネストしたループはbreakでは一気に抜けることはできない。ネストループを一気に抜けるにはラベル構文が必要  
+C言語のgoto文みたいなもの  
+
+使用例
+break kukuがラベル構文
+```
+<script type="text/javascript">
+	kuku:
+	for(var i = 1; i < 10; i++) {
+		for(var j = 1; j < 10; j++) {
+			if(i * j > 30) {
+				break kuku;
+			}
+			document.write((i * j) + ' ');
+		}
+		document.write('<br>');
+	}
+</script>
+```
+
+
 ## Chapter 3
 ### 匿名オブジェクト(無名オブジェクト)
 Objectオブジェクトの役割は、その他のオブジェクトに対して共通機能を提供することばかりではない。Objectオブジェクトを直接インスタンス化することで、ユーザーが自前のオブジェクトを定義するのに利用することもできます。
