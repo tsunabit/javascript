@@ -279,7 +279,7 @@ obj.name = 'トクジロウ';
 ### Globalオブジェクト
 parseInt()とか、encodeURI()とか、eval()とか。。。
 
-# 関数
+## Chapter 4 関数
 ### 関数を定義する3つの方法
  1. function命令で定義する
  2. Functionコンストラクタ経由で定義する
