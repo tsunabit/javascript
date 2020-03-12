@@ -460,6 +460,17 @@ checkScope();
     </script>
 ```
 
+### DOMとか
+window ← bodyタグ全体に反映する処理  
+document.getElement ← get〜とかは個別の要素に反映  
+
+↓これは全体  
+window.<イベント名> = function() {}  
+↓これは指定したIDの要素のみ  
+document.getElementById(ID値).<onイベント名> = function() {}  
+
+イベントをキャンセルするのは簡単で、ただ単にイベントハンドラが戻り値としてfalseを返すだけ  
+
 ---
 
 ### JavaScript Tips
